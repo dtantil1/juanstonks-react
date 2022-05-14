@@ -168,10 +168,12 @@ function StockSearch(){
                         <li className="list-group-item list-group-item-dark">{exchange}</li>
                         <li className="list-group-item list-group-item-dark">Industry: {industry}</li>
                         <li className="list-group-item list-group-item-dark">IPO: {ipo}</li>
-                    </ul><br /> <ShowMe data={posts} />
-                    <p>Average close: <b>${avg}</b><br />
+                    </ul>
+                    <br/><p>Average close: <b>${avg}</b><br />
                         Average <strong>adjusted close: </strong> <b>${avgAdj}</b>
                     </p>
+                    <ShowMe data={posts} />
+
                 </div>) }
         </div>
     )
