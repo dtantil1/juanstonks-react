@@ -165,15 +165,14 @@ function StockSearch(){
                         <li className="list-group-item list-group-item-dark">
                             <a href={url}><img alt="logo" width={128} height={128} src={logo}/></a></li>
                         <li className="list-group-item list-group-item-dark"><strong>{name}</strong></li>
-                        <li className="list-group-item list-group-item-dark">Average price <b>${avg}</b></li>
-                        <li className="list-group-item list-group-item-dark">The average <strong>adjusted price </strong>
-                            was <b>${avgAdj}</b></li>
+
                         <li className="list-group-item list-group-item-dark">{exchange}</li>
                         <li className="list-group-item list-group-item-dark">Industry: {industry}</li>
                         <li className="list-group-item list-group-item-dark">IPO: {ipo}</li>
-                    </ul><br />
-
-                <ShowMe data={posts} /></div>) }
+                    </ul><br /> <ShowMe data={posts} />
+                    <p>Average close price <b>${avg}</b><br />
+                        Average <strong>adjusted close</strong> price <b>${avgAdj}</b></p>
+                </div>) }
         </div>
     )
 }
