@@ -163,7 +163,7 @@ function StockSearch(){
                         <li className="list-group-item list-group-item-dark">IPO: {ipo}</li>
                     </ul><br />
 
-                <ShowMe data={posts} /></div>)}
+                <ShowMe data={posts} /></div>) }
         </div>
     )
 }
