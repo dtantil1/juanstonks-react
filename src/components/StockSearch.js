@@ -9,13 +9,17 @@ let count = 0;
 let close_price = [];
 let adjusted_close = [];
 let dates = []
+
 function StockSearch(){
+    let counter = 0;
     function ShowMe(props){
         return(
             <div>
+                {counter = 1}
                 <Table striped bordered hover size="sm" variant="dark" >
                     <thead>
                     <tr>
+                        <th>#</th>
                         <th>Date</th>
                         <th>Close</th>
                         <th>Adjusted Close</th>
@@ -24,6 +28,7 @@ function StockSearch(){
                     <tbody>
                     {props.data.map((item) => (
                         <tr key={item.date}>
+                            <td>{counter++}</td>
                             <td>{item.date}</td>
                             <td>{item.close}</td>
                             <td>{item.adjusted_close}</td>
