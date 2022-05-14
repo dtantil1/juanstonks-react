@@ -137,7 +137,7 @@ function StockSearch(){
             <div className="form-row align-items-center">
                 <div className="col-auto">
                     <label className="sr-only" htmlFor="inlineFormInput">Input Stock Ticker</label>
-                    <input type="text" className="form-control mb-2" id="inlineFormInput" name="ticker" defaultValue="TSLA" required/>
+                    <input type="text" className="form-control mb-2" id="inlineFormInput" name="ticker" defaultValue="RIVN" required/>
                 </div>
                 <div className="col-auto">
                     <label className="sr-only" htmlFor="inlineFormInputGroup">From &nbsp;</label>
@@ -163,7 +163,7 @@ function StockSearch(){
 
                     <ul className="list-group">
                         <li className="list-group-item list-group-item-dark">
-                            <a href={url}><img alt="logo" src={logo}/></a></li>
+                            <a href={url}><img alt="logo" width={128} height={128} src={logo}/></a></li>
                         <li className="list-group-item list-group-item-dark"><strong>{name}</strong></li>
                         <li className="list-group-item list-group-item-dark">Average price <b>${avg}</b></li>
                         <li className="list-group-item list-group-item-dark">The average <strong>adjusted price </strong>
