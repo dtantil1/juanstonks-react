@@ -15,7 +15,7 @@ function StockSearch(){
     function ShowMe(props){
         return(
             <div>
-                {counter = 1}
+                <p hidden>{counter = 1}</p>
                 <Table striped bordered hover size="sm" variant="dark" >
                     <thead>
                     <tr>
