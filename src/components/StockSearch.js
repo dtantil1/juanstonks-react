@@ -16,7 +16,7 @@ function StockSearch(){
         return(
             <div>
                 <p hidden>{counter = 1}</p>
-                <Table striped bordered hover size="sm" variant="dark" >
+                <Table striped bordered hover variant="dark" >
                     <thead>
                     <tr>
                         <th>#</th>
