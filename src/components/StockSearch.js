@@ -14,15 +14,15 @@ function StockSearch(){
     let counter = 0;
     function ShowMe(props){
         return(
-            <div>
+            <div >
                 <p hidden>{counter = 1}</p>
                 <Table striped bordered hover variant="dark" >
                     <thead>
                     <tr>
                         <th>#</th>
                         <th>Date</th>
-                        <th>Close</th>
-                        <th>Adjusted Close</th>
+                        <th>Close ($)</th>
+                        <th>Adjusted Close ($)</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,7 +30,7 @@ function StockSearch(){
                         <tr key={item.date}>
                             <td>{counter++}</td>
                             <td>{item.date}</td>
-                            <td>{item.close}</td>
+                            <td>{item.close} </td>
                             <td>{item.adjusted_close}</td>
                         </tr>
                     ))}
@@ -131,8 +131,8 @@ function StockSearch(){
 
 
     return(
-        <div>
-        <div>
+        <div className="container-fluid">
+        <div className="container-fluid">
         <form onSubmit={handleSubmit}>
             <div className="form-row align-items-center">
                 <div className="col-auto">
@@ -158,7 +158,7 @@ function StockSearch(){
 
         </div>
             {loading ?(<div></div>) : (
-                <div>
+                <div className="container-fluid">
                     <br />
 
                     <ul className="list-group">
