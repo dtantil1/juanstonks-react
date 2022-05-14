@@ -1,6 +1,6 @@
 
 import Logo from './components/Logo.js';
-import NavbarTop from "./components/NavbarTop.js";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 

@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {Table} from "react-bootstrap";
 import axios from 'axios';
-import Chart from './Chart'
+
 import React from 'react';
 const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
@@ -34,8 +34,8 @@ function StockSearch(){
             </div>
         )
     }
-    const [searchTicker,setSearchTicker] = React.useState('');
-    const [message,setMessage] = React.useState('');
+    //const [searchTicker,setSearchTicker] = React.useState('');
+    //const [message,setMessage] = React.useState('');
     function dateMaker(date){
         let dd = String(date.getDate()).padStart(2, '0');
         let mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -59,11 +59,11 @@ function StockSearch(){
         stock.ticker = event.target.elements.ticker.value.toUpperCase();
         stock.date1 = event.target.elements.day1.value
         stock.date2 = event.target.elements.day2.value
-        setMessage(stock.ticker + " from " + stock.date1 + " to " + stock.date2)
+        //setMessage(stock.ticker + " from " + stock.date1 + " to " + stock.date2)
 
         let data = [];
         data.push(stock.ticker, stock.date1, stock.date2, true)
-        setSearchTicker(data)
+        //setSearchTicker(data)
         loadPost(data);
 
     }
@@ -153,7 +153,7 @@ function StockSearch(){
                     <br />
 
                     <ul className="list-group">
-                        <li className="list-group-item list-group-item-dark"><img src={logo}/></li>
+                        <li className="list-group-item list-group-item-dark"><img alt="logo" src={logo}/></li>
                         <li className="list-group-item list-group-item-dark"><strong>{name}</strong></li>
                         <li className="list-group-item list-group-item-dark">Average price <b>${avg}</b></li>
                         <li className="list-group-item list-group-item-dark">The average <strong>adjusted price </strong>
