@@ -82,6 +82,7 @@ function StockSearch(){
     const[industry, setIndustry]=useState('');
     const[logo, setLogo]=useState('');
     const[ipo, setIPO]=useState('');
+    const[url, setUrl]=useState('');
 
 
     const loadPost = async (data) => {
@@ -96,6 +97,7 @@ function StockSearch(){
             ".US?api_token=625cdb1c39d9f5.23708719&period=d&fmt=json&from="+data[1]+"&to="+data[2]);
         // After fetching data stored it in posts state.
         setPosts(response.data);
+
         // Closed the loading page
         setLoading(false)
         count++;
@@ -112,11 +114,13 @@ function StockSearch(){
         //GET STOCK DATA
         const response2 = await axios.get("https://finnhub.io/api/v1/stock/profile2?symbol="
             +data[0]+ "&token=c9ei572ad3iff7bjsb80");
+        console.log(response2.data)
         setName(response2.data.name)
         setExchange(response2.data.exchange)
         setLogo(response2.data.logo)
         setIPO(response2.data.ipo)
         setIndustry(response2.data.finnhubIndustry)
+        setUrl(response2.data.weburl)
 
 
         console.log("LOAD POST! Count: "+ count)
@@ -158,7 +162,8 @@ function StockSearch(){
                     <br />
 
                     <ul className="list-group">
-                        <li className="list-group-item list-group-item-dark"><img alt="logo" src={logo}/></li>
+                        <li className="list-group-item list-group-item-dark">
+                            <a href={url}><img alt="logo" src={logo}/></a></li>
                         <li className="list-group-item list-group-item-dark"><strong>{name}</strong></li>
                         <li className="list-group-item list-group-item-dark">Average price <b>${avg}</b></li>
                         <li className="list-group-item list-group-item-dark">The average <strong>adjusted price </strong>
