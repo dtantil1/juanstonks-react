@@ -7,9 +7,9 @@ import './App.css'
 function App() {
   return (
 
-    <div className="App container-fluid">
+    <div className="App">
 
-          <div className="container-fluid, text-center">
+          <div className="container-fluid, text-center, m-5">
           <Logo> </Logo>
           </div>
 

@@ -131,8 +131,8 @@ function StockSearch(){
 
 
     return(
-        <div className="container-fluid">
-        <div className="container-fluid">
+        <div >
+        <div >
         <form onSubmit={handleSubmit}>
             <div className="form-row align-items-center">
                 <div className="col-auto">
@@ -158,7 +158,7 @@ function StockSearch(){
 
         </div>
             {loading ?(<div></div>) : (
-                <div className="container-fluid">
+                <div>
                     <br />
 
                     <ul className="list-group">
