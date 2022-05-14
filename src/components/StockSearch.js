@@ -21,8 +21,8 @@ function StockSearch(){
                     <tr>
                         <th>#</th>
                         <th>Date</th>
-                        <th>Close ($)</th>
-                        <th>Adjusted Close ($)</th>
+                        <th>Close($)</th>
+                        <th>Adjusted($)</th>
                     </tr>
                     </thead>
                     <tbody>
